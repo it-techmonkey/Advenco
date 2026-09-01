@@ -24,11 +24,11 @@ export const motorizedBlindsPages: Record<string, CommercialBlindPageContent> = 
       "Advenco Window Blinds and Shutters is at the forefront of this revolution, offering cutting-edge solutions that combine functionality, elegance, and ease of use. Let's dive into the benefits and features of these innovative window treatments.",
     ],
     heroImage:
-      "/images/stock/photo-1743689377719-76800a2143fe.jpg",
-    heroImageAlt: "Dark modern kitchen window fitted with a zebra-stripe day and night blind",
+      "/images/products/dayandnight8.webp",
+    heroImageAlt: "Large charcoal day and night blind above a staircase landing",
     sideImage:
-      "/images/stock/photo-1611085904467-5f0c11f93f49.jpg",
-    sideImageAlt: "Day and night blinds fitted to windows in a sunlit balcony room",
+      "/images/products/dayandnight4.webp",
+    sideImageAlt: "A row of black-and-white day and night blinds across a bank of windows",
     importanceLabel: "What Are These Blinds",
     importanceHeadingLines: ["Alternating Sheer and", "Opaque Fabric Stripes"],
     importanceBody: [
@@ -97,8 +97,10 @@ export const motorizedBlindsPages: Record<string, CommercialBlindPageContent> = 
       },
     ],
     bannerImage:
-      "/images/stock/photo-1613020740416-eae8945bdcdb.jpg",
-    bannerImageAlt: "Day and night blind above a desk workspace catching afternoon light",
+      "/images/products/dayandnight3.webp",
+    bannerImageAlt: "Grey day and night blind on a dining room window behind a farmhouse table",
+    closingImage: "/images/products/dayandnight6.webp",
+    closingImageAlt: "Close-up of a black day and night blind with light filtering between the bands",
     closingHeading: "Transform Your Home Today",
     closingBody: [
       "Experience the perfect blend of style, convenience, and innovation with day and night motorised blinds in UK from Advenco Window Blinds and Shutters. Whether you're looking to enhance your living room, bedroom, or office, our customisable solutions will meet your needs and exceed your expectations.",
