@@ -50,8 +50,8 @@ export const shuttersContent: ShuttersPageContent = {
   heroSubheading: "Premium Shutters in the UK",
   heroBody:
     "Advenco Window Blinds and Shutters is a trusted name in the UK for high-quality window coverings. We offer premium shutters that add elegance and functionality to your windows, made from top-quality materials with free window measuring and fitting services across the UK.",
-  heroImage: "/images/stock/photo-1745761264415-6acbdb47a0c7.jpg",
-  heroImageAlt: "Close-up of wooden Venetian shutter slats on a balcony window",
+  heroImage: "/images/products/perfectfitshutter3.webp",
+  heroImageAlt: "White Perfect Fit plantation shutters on a kitchen window and French doors",
   metaTitle: "Premium Shutters in the UK | Advenco Window Blinds and Shutters",
   metaDescription:
     "Premium plantation shutters from Advenco Window Blinds and Shutters — Café Style, Full Height, Tier on Tier, and Bay Window shutters, made in Britain with free measuring and fitting.",
@@ -96,29 +96,29 @@ export const shuttersContent: ShuttersPageContent = {
     {
       heading: "Tier on Tier Plantation Shutters in the UK: Versatile and Functional",
       body: "Are you searching for premium plantation shutters in the UK? Advenco Window Blinds and Shutters has the perfect solution. We offer high-quality plantation shutters crafted from the finest materials, ensuring they enhance natural light while maintaining privacy. Our shutters in the UK are ideal for living rooms, bedrooms, and offices. Available in various colours, designs, styles, and sizes, our shutters cater to all needs. Don't hesitate – get the best plantation shutters in the UK with free fitting services in our coverage areas. We are the leading supplier of plantation shutters, offering top-quality products for all requirements.",
-      image: "/images/stock/photo-1745761264415-6acbdb47a0c7.jpg",
-      imageAlt: "Close-up of wooden Venetian shutter slats on a balcony window",
+      image: "/images/products/perfectfitshutter1.webp",
+      imageAlt: "White Perfect Fit plantation shutters fitted to French doors in a hallway",
       imageLeft: true,
     },
     {
       heading: "Café Style Shutters in the UK: Elegant and Practical",
       body: "Our classic café style shutters in the UK are perfect for living rooms, office windows, and other spaces requiring ample daylight. With an open top for maximum daylight and a closed bottom for privacy, these shutters offer versatility and style. They can be fully opened for even more light when privacy is not a concern.",
-      image: "/images/stock/photo-1735822083502-0c5fab870457.jpg",
-      imageAlt: "Blue café style shutters fitted to windows on a white house exterior",
+      image: "/images/products/perfectfitshutter2.webp",
+      imageAlt: "White Perfect Fit plantation shutters with louvres tilted open on French doors",
       imageLeft: true,
     },
     {
       heading: "Full Height Shutters in the UK: Complete Coverage and Control",
       body: "For spaces where privacy and light control are crucial, Advenco Window Blinds and Shutters in the UK offers full height shutters. These shutters provide full window coverage, allowing for excellent daylight control and complete blackout when necessary. They are ideal for creating dark, private spaces as needed.",
-      image: "/images/stock/photo-1653134641891-118e3094fc42.jpg",
-      imageAlt: "White plantation shutters fitted to a bathroom window",
+      image: "/images/products/perfectfitshutter4.webp",
+      imageAlt: "White full-height Perfect Fit plantation shutters closed across French doors",
       imageLeft: false,
     },
     {
       heading: "Tier on Tier Shutters in the UK: Maximum Flexibility",
       body: "For those who desire enhanced control over their windows, our tier on tier shutters in the UK are the ideal choice. These shutters feature independently controlled panels, offering excellent daylight, privacy, and insulation control. Fully closed, they provide blackout conditions, while they can be opened to allow for fresh air and daylight as needed. Perfect for both homes and offices.",
-      image: "/images/stock/photo-1728532966669-cde5cd5886a6.jpg",
-      imageAlt: "Close-up of warm wooden shutter slats beside a green plant",
+      image: "/images/products/perfectfitshutter5.webp",
+      imageAlt: "White Perfect Fit plantation shutters on a patio door and full-length window",
       imageLeft: true,
     },
     {
