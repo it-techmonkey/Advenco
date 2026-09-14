@@ -100,11 +100,11 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       "This groundbreaking product is set to revolutionize how homeowners approach window dressing, offering unparalleled convenience, style, and versatility.",
     ],
     heroImage:
-      "/images/stock/photo-1659949294512-95abb6aebf6c.jpg",
-    heroImageAlt: "Living room sofa beneath a window fitted with a striped day and night blind",
+      "/images/products/dayandnight5.webp",
+    heroImageAlt: "Grey day and night blind fitted to a square window on a white shiplap wall",
     sideImage:
-      "/images/stock/photo-1743689377719-76800a2143fe.jpg",
-    sideImageAlt: "Dark kitchen window fitted with a zebra-stripe day and night blind",
+      "/images/products/dayandnight2.webp",
+    sideImageAlt: "White day and night blind set to its sheer position above a plant-lined windowsill",
     importanceLabel: "Why Choose These Blinds",
     importanceHeadingLines: ["Effortless Installation,", "Day & Night Functionality"],
     importanceBody: [
@@ -155,8 +155,10 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       },
     ],
     bannerImage:
-      "/images/stock/photo-1611085904467-5f0c11f93f49.jpg",
-    bannerImageAlt: "Day and night blinds fitted to windows in a sunlit balcony room",
+      "/images/products/dayandnight1.webp",
+    bannerImageAlt: "Grey day and night blinds fitted to patio doors and a side window in a dining room",
+    closingImage: "/images/products/dayandnight7.webp",
+    closingImageAlt: "Caramel day and night blind part-drawn across a tall recessed window",
     closingHeading: "Transform Your Home with Advenco's Perfect Fit Day and Night Blinds",
     closingBody: [
       "Incorporating Perfect Fit Day and Night Blinds in UK into your home is more than just a design choice; it's an upgrade to your lifestyle. The blend of convenience, style, and functionality makes these blinds an excellent investment for any homeowner.",
@@ -176,11 +178,11 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       "Designed for convenience and aesthetic appeal, these blinds offer a seamless integration into your windows and doors, ensuring a flawless finish every time.",
     ],
     heroImage:
-      "/images/stock/photo-1609423433459-a65b330ef5da.jpg",
-    heroImageAlt: "Bright white Venetian blinds in a sunlit home office",
+      "/images/products/perfectfitblinds3.webp",
+    heroImageAlt: "Duck-egg Perfect Fit Venetian blinds fitted to white French doors",
     sideImage:
-      "/images/stock/photo-1587812226208-37081e8c0ede.jpg",
-    sideImageAlt: "Venetian blind slats with a white jug on the windowsill",
+      "/images/products/perfectfitblinds4.webp",
+    sideImageAlt: "Perfect Fit Venetian blinds on French doors, one raised to reveal the garden",
     importanceLabel: "What Are Perfect Fit Venetian Blinds",
     importanceHeadingLines: ["A Unique Bracket System,", "No Drilling Required"],
     importanceBody: [
@@ -236,8 +238,8 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       },
     ],
     bannerImage:
-      "/images/stock/photo-1603299938527-d035bc6fc2c8.jpg",
-    bannerImageAlt: "Venetian blind slats with a blue sky and greenery visible outside",
+      "/images/products/perfectfitblinds2.webp",
+    bannerImageAlt: "Oak wood-effect Perfect Fit Venetian blinds on a kitchen bay window",
     closingHeading: "Transform Your Space Today!",
     closingBody: [
       "Whether you're looking to update your living room, bedroom, or office space, Perfect Fit venetian blinds (no screw) from Advenco Window Blinds and Shutters are the ideal choice for a hassle-free installation and stunning visual impact.",
@@ -431,11 +433,11 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       "These blinds are not just a window covering; they are a stylish addition that enhances your home's aesthetics and functionality. Here's why these blinds are the perfect choice for your windows.",
     ],
     heroImage:
-      "/images/stock/photo-1622880355742-af182a61b362.jpg",
-    heroImageAlt: "Wooden Venetian blind fitted above a chair, casting striped shadows",
+      "/images/products/woodvenetianblinds3.webp",
+    heroImageAlt: "Grey wood-effect Venetian blind fitted to a recessed bedroom window",
     sideImage:
-      "/images/stock/photo-1634743761024-5d5c338b6368.jpg",
-    sideImageAlt: "Green-tinted wooden Venetian blind slats catching daylight",
+      "/images/products/woodvenetianblinds6.webp",
+    sideImageAlt: "White wooden Venetian blinds with tape ladders on a leaded-glass window",
     importanceLabel: "What Are These Blinds",
     importanceHeadingLines: ["Timeless Wood,", "the Perfect Fit System"],
     importanceBody: [
@@ -491,8 +493,8 @@ export const perfectFitBlindsPages: Record<string, CommercialBlindPageContent> =
       },
     ],
     bannerImage:
-      "/images/stock/photo-1496522921967-21f118bec0e5.jpg",
-    bannerImageAlt: "Warm golden light through classic wooden Venetian blind slats",
+      "/images/products/woodvenetianblinds5.webp",
+    bannerImageAlt: "White wooden Venetian blinds with dark tape ladders across a wide window",
     closingHeading: "Transform Your Home Today",
     closingBody: [
       "Wooden Venetian Perfect Fit Blinds in UK by Advenco Window Blinds and Shutters are the ideal choice for homeowners seeking style, convenience, and functionality. Transform your home with our elegant and practical blinds, and enjoy the perfect combination of beauty and efficiency.",
