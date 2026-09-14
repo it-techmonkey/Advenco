@@ -9,8 +9,8 @@
  *  - Arrow navigation controls
  *  - Accessible ARIA labels for slides and controls
  *
- * Content from WordPress homepage slider.
- * Design from the new Base44 reference (dark overlay, white text, teal buttons).
+ * Background imagery is custom-created for Advenco and intentionally composed
+ * with quiet space on the left so the campaign copy remains legible.
  */
 
 "use client";
@@ -37,9 +37,8 @@ const slides: Slide[] = [
     headingItalic: "Elegance",
     description:
       "Discover premium window blinds and shutters that blend style, innovation, and comfort to elevate your home.",
-    image:
-      "/images/stock/photo-1758448756207-54505680d130.jpg",
-    alt: "Transform Your Space with Elegance — Advenco Blinds",
+    image: "/images/hero/advenco-hero-shutters.png",
+    alt: "Sunlit living room with fitted plantation shutters",
   },
   {
     id: 2,
@@ -47,9 +46,8 @@ const slides: Slide[] = [
     headingItalic: "Innovation",
     description:
       "Enhance your living spaces with our beautifully crafted blinds and shutters, designed to add elegance and functionality to every room.",
-    image:
-      "/images/stock/photo-1757452608866-0b9c2f3e2d6b.jpg",
-    alt: "Where Style Meets Innovation — Advenco Blinds",
+    image: "/images/hero/advenco-hero-roller-blinds.png",
+    alt: "Contemporary dining room with tailored roller blinds",
   },
   {
     id: 3,
@@ -57,9 +55,8 @@ const slides: Slide[] = [
     headingItalic: "Elegance",
     description:
       "Premium blinds and shutters that bring sophistication and practical comfort to your home, one window at a time.",
-    image:
-      "/images/stock/photo-1603673319826-2f109cbf42aa.jpg",
-    alt: "Redefining Window Elegance — Advenco Blinds",
+    image: "/images/hero/advenco-hero-day-night-blinds.png",
+    alt: "Calm bedroom with day and night blinds in a bay window",
   },
   {
     id: 4,
@@ -67,9 +64,8 @@ const slides: Slide[] = [
     headingItalic: "One Window at a Time",
     description:
       "Upgrade your home's aesthetics and functionality with our high-quality window blinds and shutters, tailored for modern living.",
-    image:
-      "/images/stock/photo-1653134641891-118e3094fc42.jpg",
-    alt: "Crafting Comfort One Window at a Time — Advenco Blinds",
+    image: "/images/hero/advenco-hero-vertical-blinds.png",
+    alt: "Modern kitchen with vertical blinds at bifold doors",
   },
   {
     id: 5,
@@ -77,9 +73,8 @@ const slides: Slide[] = [
     headingItalic: "Designed for You",
     description:
       "Experience the perfect balance of beauty and innovation with our bespoke window solutions, crafted for style and comfort.",
-    image:
-      "/images/stock/photo-1745761264415-6acbdb47a0c7.jpg",
-    alt: "Blinds and Shutters Designed for You — Advenco Blinds",
+    image: "/images/hero/advenco-hero-venetian-blinds.png",
+    alt: "Home office with natural wood Venetian blinds",
   },
 ];
 
