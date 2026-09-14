@@ -37,7 +37,7 @@ const slides: Slide[] = [
     headingItalic: "Elegance",
     description:
       "Discover premium window blinds and shutters that blend style, innovation, and comfort to elevate your home.",
-    image: "/images/hero/advenco-hero-shutters.png",
+    image: "/images/hero/advenco-hero-shutters.webp",
     alt: "Sunlit living room with fitted plantation shutters",
   },
   {
@@ -46,7 +46,7 @@ const slides: Slide[] = [
     headingItalic: "Innovation",
     description:
       "Enhance your living spaces with our beautifully crafted blinds and shutters, designed to add elegance and functionality to every room.",
-    image: "/images/hero/advenco-hero-roller-blinds.png",
+    image: "/images/hero/advenco-hero-roller-blinds.webp",
     alt: "Contemporary dining room with tailored roller blinds",
   },
   {
@@ -55,7 +55,7 @@ const slides: Slide[] = [
     headingItalic: "Elegance",
     description:
       "Premium blinds and shutters that bring sophistication and practical comfort to your home, one window at a time.",
-    image: "/images/hero/advenco-hero-day-night-blinds.png",
+    image: "/images/hero/advenco-hero-day-night-blinds.webp",
     alt: "Calm bedroom with day and night blinds in a bay window",
   },
   {
@@ -64,7 +64,7 @@ const slides: Slide[] = [
     headingItalic: "One Window at a Time",
     description:
       "Upgrade your home's aesthetics and functionality with our high-quality window blinds and shutters, tailored for modern living.",
-    image: "/images/hero/advenco-hero-vertical-blinds.png",
+    image: "/images/hero/advenco-hero-vertical-blinds.webp",
     alt: "Modern kitchen with vertical blinds at bifold doors",
   },
   {
@@ -73,7 +73,7 @@ const slides: Slide[] = [
     headingItalic: "Designed for You",
     description:
       "Experience the perfect balance of beauty and innovation with our bespoke window solutions, crafted for style and comfort.",
-    image: "/images/hero/advenco-hero-venetian-blinds.png",
+    image: "/images/hero/advenco-hero-venetian-blinds.webp",
     alt: "Home office with natural wood Venetian blinds",
   },
 ];
