@@ -19,6 +19,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import SeasonalBanner from "@/components/SeasonalBanner";
+import { seasonalCopy } from "@/data/seasonal";
 
 /* ---------- Type Definitions ---------- */
 
@@ -728,7 +730,7 @@ export default function Navbar() {
 
           {/* Right: tagline */}
           <span className="hidden sm:block font-medium tracking-wider text-xs text-white/70 uppercase">
-            Free Consultation &amp; Installation
+            {seasonalCopy?.topBarTagline ?? "Free Consultation & Installation"}
           </span>
         </div>
       </div>
@@ -1105,6 +1107,9 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      {/* Seasonal promo strip — renders nothing outside a campaign */}
+      <SeasonalBanner />
     </>
   );
 }
