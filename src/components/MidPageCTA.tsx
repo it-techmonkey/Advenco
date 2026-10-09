@@ -13,6 +13,7 @@
  */
 
 import Link from "next/link";
+import { seasonalCopy } from "@/data/seasonal";
 
 export default function MidPageCTA({ productName }: { productName: string }) {
   return (
@@ -21,7 +22,7 @@ export default function MidPageCTA({ productName }: { productName: string }) {
         <div className="bg-white border border-advenco-border border-l-4 border-l-advenco-teal rounded-sm shadow-sm px-6 py-7 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <p className="text-advenco-teal text-xs font-semibold tracking-[0.2em] uppercase mb-2">
-              Free, No-Obligation Quote
+              {seasonalCopy?.midCtaEyebrow ?? "Free, No-Obligation Quote"}
             </p>
             <h3 className="font-heading text-advenco-graphite-mid text-xl sm:text-2xl font-semibold leading-snug">
               Curious what {productName.toLowerCase()} would cost for your space?

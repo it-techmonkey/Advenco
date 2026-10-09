@@ -12,6 +12,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { seasonalCopy } from "@/data/seasonal";
 
 /* ---------- Component ---------- */
 
@@ -133,7 +134,7 @@ export default function ContactSection() {
           ============================================================ */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40 mb-8">
-              Request A Free Quote
+              {seasonalCopy?.contactEyebrow ?? "Request A Free Quote"}
             </p>
 
             {submitted ? (
@@ -234,7 +235,7 @@ export default function ContactSection() {
                   className="w-full py-4 bg-[#00aeef] hover:bg-[#0099d4] disabled:bg-[#00aeef]/50 text-white text-sm font-bold tracking-widest uppercase rounded-sm transition-colors"
                   aria-label="Submit your free quote request"
                 >
-                  {submitting ? "Sending..." : "Get My Free Quote"}
+                  {submitting ? "Sending..." : seasonalCopy?.contactSubmit ?? "Get My Free Quote"}
                 </button>
 
                 <p className="text-white/35 text-xs text-center">

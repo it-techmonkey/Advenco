@@ -15,6 +15,7 @@
  */
 
 import React from "react";
+import { seasonalCopy } from "@/data/seasonal";
 
 /* ---------- Trust Items Data ---------- */
 
@@ -67,7 +68,7 @@ const trustItems: TrustItem[] = [
         />
       </svg>
     ),
-    title: "Price Match Guarantee",
+    title: seasonalCopy?.trustPriceMatchTitle ?? "Price Match Guarantee",
     subtitle: "Best value assured",
   },
   {
@@ -89,7 +90,7 @@ const trustItems: TrustItem[] = [
         />
       </svg>
     ),
-    title: "Free Installation",
+    title: seasonalCopy?.trustFreeInstallationTitle ?? "Free Installation",
     subtitle: "Professional fitting included",
   },
 ];

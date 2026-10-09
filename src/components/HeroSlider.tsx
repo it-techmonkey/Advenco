@@ -17,6 +17,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { seasonalCopy } from "@/data/seasonal";
 
 /* ---------- Slide Data (from WordPress hero slider) ---------- */
 
@@ -80,9 +81,37 @@ const slides: Slide[] = [
 
 const AUTOPLAY_INTERVAL = 4000; // ms between slide transitions
 
+/* ---------- Seasonal Campaign ---------- */
+
+/**
+ * Applies the active seasonal campaign's copy to the standard slides.
+ * A seasonal banner replaces a slide's photo only when the server confirmed
+ * the file exists (seasonalImages); otherwise the slide keeps its standard
+ * photo and alt text, so a missing banner never leaves the hero blank.
+ */
+function withSeasonalCopy(seasonalImages: string[]): Slide[] {
+  const campaign = seasonalCopy;
+  if (!campaign) return slides;
+
+  return slides.map((slide) => {
+    const seasonal = campaign.heroSlides[slide.id];
+    if (!seasonal) return slide;
+    const { image, alt, ...copy } = seasonal;
+    return seasonalImages.includes(image)
+      ? { ...slide, ...copy, image, alt }
+      : { ...slide, ...copy };
+  });
+}
+
 /* ---------- Component ---------- */
 
-export default function HeroSlider() {
+interface HeroSliderProps {
+  /** Seasonal banner paths that exist in /public — resolved on the server */
+  seasonalImages?: string[];
+}
+
+export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
+  const activeSlides = withSeasonalCopy(seasonalImages);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -113,7 +142,7 @@ export default function HeroSlider() {
     return () => clearInterval(timer);
   }, [goNext]);
 
-  const current = slides[currentIndex];
+  const current = activeSlides[currentIndex];
 
   return (
     <section
@@ -124,7 +153,7 @@ export default function HeroSlider() {
       {/* ============================================================
           Background Image Slides (crossfade)
       ============================================================ */}
-      {slides.map((slide, idx) => (
+      {activeSlides.map((slide, idx) => (
         <div
           key={slide.id}
           role="img"
@@ -160,7 +189,7 @@ export default function HeroSlider() {
           className="text-white/70 text-[11px] sm:text-xs font-normal tracking-[0.25em] uppercase mb-5 animate-fade-in-up"
           style={{ animationFillMode: "both", fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)" }}
         >
-          Premium Blinds &amp; Shutters &mdash; Made in Britain
+          {seasonalCopy?.heroPreheading ?? "Premium Blinds & Shutters — Made in Britain"}
         </p>
 
         {/* Main heading */}

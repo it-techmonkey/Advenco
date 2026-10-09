@@ -30,6 +30,22 @@ import OurProcess from "@/components/OurProcess";
 import MadeToMeasure from "@/components/MadeToMeasure";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { existsSync } from "node:fs";
+import path from "node:path";
+import { seasonalCopy, HALLOWEEN_HERO_DIR } from "@/data/seasonal";
+
+/**
+ * Seasonal hero banners that have actually been added to /public. Checked at
+ * build time so a slide whose banner hasn't been supplied yet keeps its
+ * standard photo instead of rendering blank.
+ */
+function getSeasonalHeroImages(): string[] {
+  if (!seasonalCopy) return [];
+  const dir = path.join(process.cwd(), "public", HALLOWEEN_HERO_DIR);
+  return Object.values(seasonalCopy.heroSlides)
+    .map((slide) => slide.image)
+    .filter((image) => existsSync(path.join(dir, path.basename(image))));
+}
 
 export default function HomePage() {
   return (
@@ -38,7 +54,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* ── 2. Hero Slider ─────────────────────────────────── */}
-      <HeroSlider />
+      <HeroSlider seasonalImages={getSeasonalHeroImages()} />
 
       {/* ── 3. Trust Bar ───────────────────────────────────── */}
       <TrustBar />
