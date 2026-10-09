@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
                 "Custom-made to your exact window dimensions",
                 "Expert installation by our trained team",
                 "Wide range of materials, styles and colours",
-                "Price match guarantee â€” best value assured",
+                "Price match guarantee — best value assured",
               ].map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
                   {/* Teal bullet dot */}

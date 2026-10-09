@@ -37,7 +37,7 @@ const benefits: Benefit[] = [
     ),
     title: "Unparalleled Light Control",
     description:
-      "Manage natural light to create a bright, airy ambience or a cosy, intimate atmosphere â€” exactly as you desire.",
+      "Manage natural light to create a bright, airy ambience or a cosy, intimate atmosphere — exactly as you desire.",
   },
   {
     id: "enhanced-privacy",
