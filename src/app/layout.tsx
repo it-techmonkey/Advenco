@@ -5,12 +5,12 @@
  *  - Outfit      → headings (h1–h6), display text (--font-heading / --font-display)
  *  - Space Grotesk → body copy, paragraphs, labels, inputs, buttons (--font-body)
  *
- * Both fonts are loaded via next/font/google with CSS variable tokens that
- * Tailwind v4 picks up through @theme in globals.css.
+ * Both fonts are bundled locally so builds do not depend on Google Fonts
+ * responses. CSS variable tokens are picked up by @theme in globals.css.
  */
 
 import type { Metadata } from "next";
-import { Outfit, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
@@ -19,18 +19,20 @@ import "./globals.css";
 ───────────────────────────────────────────────── */
 
 /** Outfit — used for all headings, display text, and UI labels */
-const outfit = Outfit({
-  subsets: ["latin"],
+const outfit = localFont({
+  src: "./fonts/outfit-latin-variable.woff2",
   variable: "--font-heading",   // maps to Tailwind token
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: "300 900",
+  style: "normal",
   display: "swap",
 });
 
 /** Space Grotesk — used for body copy, paragraphs, inputs, buttons */
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "./fonts/space-grotesk-latin-variable.woff2",
   variable: "--font-body",      // maps to Tailwind token
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "300 700",
+  style: "normal",
   display: "swap",
 });
 
