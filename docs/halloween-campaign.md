@@ -1,5 +1,10 @@
 # Halloween Campaign — How It Works and How to Remove It
 
+> **Retired November 2026.** Black Friday has replaced this campaign. Use
+> [black-friday-campaign.md](black-friday-campaign.md) for the current switch-off
+> and rollback instructions. The Halloween flag and copy described below no
+> longer exist; these instructions are retained only as a historical reference.
+
 Temporary festive theme (October 2026). No prices or offers changed: the existing
 free consultation, free installation and price match guarantee are re-labelled as
 Halloween offers. Brand colours, the existing hero photos, page titles, meta

@@ -1,20 +1,20 @@
 /**
- * Seasonal Campaign — Halloween Sale
+ * Seasonal Campaign — Black Friday Sale
  *
- * Temporary festive wording and hero banners layered over the standard site.
+ * Temporary campaign wording and hero banners layered over the standard site.
  * No prices or offers change: the existing free consultation, free
- * installation and price match guarantee are presented as the Halloween
+ * installation and price match guarantee are presented as the Black Friday
  * offers. Brand colours and page SEO copy are untouched.
  *
- * TO SWITCH OFF: set HALLOWEEN_ACTIVE to false and redeploy. Every component
+ * TO SWITCH OFF: set BLACK_FRIDAY_ACTIVE to false and redeploy. Every component
  * reads `seasonalCopy` and falls back to its standard copy and hero photos
  * when it is null.
  *
  * Deliberately no end date or countdown anywhere in this copy — the offers
- * carry on after Halloween, so the wording must not imply they expire.
+ * carry on after Black Friday, so the wording must not imply they expire.
  */
 
-export const HALLOWEEN_ACTIVE: boolean = true;
+export const BLACK_FRIDAY_ACTIVE: boolean = true;
 
 /* ---------- Types ---------- */
 
@@ -43,67 +43,67 @@ export interface SeasonalCopy {
   contactSubmit: string;
 }
 
-/* ---------- Halloween Copy ---------- */
+/* ---------- Black Friday Copy ---------- */
 
-/** Folder (inside /public) the Halloween hero banners are dropped into */
-export const HALLOWEEN_HERO_DIR = "/images/hero/halloween";
+/** Folder (inside /public) containing the active campaign's hero banners */
+export const SEASONAL_HERO_DIR = "/images/hero/black-friday";
 
-const halloweenCopy: SeasonalCopy = {
+const blackFridayCopy: SeasonalCopy = {
   announcement: {
-    title: "Halloween Sale",
+    title: "Black Friday Sale",
     detail: "Free Consultation, Free Installation & Price Match Guarantee",
     cta: "Claim Your Free Quote",
   },
-  topBarTagline: "Halloween Sale: Free Installation",
-  heroPreheading: "Halloween Sale — Made in Britain",
+  topBarTagline: "Black Friday: Free Installation",
+  heroPreheading: "Black Friday Sale — Made in Britain",
   heroSlides: {
     1: {
-      heading: "No Tricks, Just",
+      heading: "This Black Friday, Choose",
       headingItalic: "Beautiful Shutters",
       description:
-        "Our Halloween Sale is here: free consultation, free installation and a price match guarantee on premium blinds and shutters.",
-      image: `${HALLOWEEN_HERO_DIR}/advenco-halloween-shutters.webp`,
-      alt: "Living room with fitted plantation shutters, styled for Halloween with pumpkins and candlelight",
+        "Explore our Black Friday Sale: free consultation, free installation and a price match guarantee on premium blinds and shutters.",
+      image: `${SEASONAL_HERO_DIR}/advenco-black-friday-shutters.webp`,
+      alt: "Contemporary living room with white plantation shutters, a cream sofa and charcoal accents",
     },
     2: {
-      heading: "Treat Your Windows to",
-      headingItalic: "Something New",
+      heading: "Refresh Your Windows",
+      headingItalic: "This Black Friday",
       description:
-        "Beautifully crafted roller blinds, made to measure and fitted free as part of our Halloween Sale.",
-      image: `${HALLOWEEN_HERO_DIR}/advenco-halloween-roller-blinds.webp`,
-      alt: "Dining room with tailored roller blinds and an autumn table setting of pumpkins and candles",
+        "Beautifully crafted roller blinds, made to measure and fitted free. Discover your perfect style in our Black Friday Sale.",
+      image: `${SEASONAL_HERO_DIR}/advenco-black-friday-roller-blinds.webp`,
+      alt: "Modern dining room with charcoal roller blinds, an oak table and cream upholstered chairs",
     },
     3: {
-      heading: "Darker Nights,",
-      headingItalic: "Cosier Rooms",
+      heading: "Beautiful Light,",
+      headingItalic: "Day and Night",
       description:
-        "Day and night blinds that put you in control of light and privacy as the evenings draw in, with free installation included.",
-      image: `${HALLOWEEN_HERO_DIR}/advenco-halloween-day-night-blinds.webp`,
-      alt: "Bedroom at dusk with day and night blinds in a bay window and pumpkins on the sill",
+        "Find your balance of light and privacy this Black Friday with made-to-measure day and night blinds, including free installation.",
+      image: `${SEASONAL_HERO_DIR}/advenco-black-friday-day-night-blinds.webp`,
+      alt: "Calm bedroom at dusk with layered day and night blinds, cream bedding and a teal throw",
     },
     4: {
-      heading: "Spooky Season,",
+      heading: "Black Friday,",
       headingItalic: "Stylish Windows",
       description:
-        "No tricks on price: every blind and shutter in our Halloween Sale comes with our price match guarantee.",
-      image: `${HALLOWEEN_HERO_DIR}/advenco-halloween-vertical-blinds.webp`,
-      alt: "Kitchen with vertical blinds at bifold doors, with carved pumpkins on the island",
+        "Discover vertical blinds tailored to your space in our Black Friday Sale, with free installation and our price match guarantee.",
+      image: `${SEASONAL_HERO_DIR}/advenco-black-friday-vertical-blinds.webp`,
+      alt: "Modern kitchen-diner with off-white vertical blinds across glazed patio doors and a pale stone island",
     },
     5: {
-      heading: "Frightfully Good",
-      headingItalic: "Blinds, Made for You",
+      heading: "Your Style, Your Space,",
+      headingItalic: "Made for You",
       description:
-        "Bespoke window solutions with a free consultation, expert fitting and nothing scary about the service.",
-      image: `${HALLOWEEN_HERO_DIR}/advenco-halloween-venetian-blinds.webp`,
-      alt: "Home office with natural wood Venetian blinds and small pumpkins on the desk",
+        "Make more of your home this Black Friday with bespoke Venetian blinds, a free consultation and expert fitting at no extra cost.",
+      image: `${SEASONAL_HERO_DIR}/advenco-black-friday-venetian-blinds.webp`,
+      alt: "Refined home office with natural oak Venetian blinds, a dark wood desk and a charcoal chair",
     },
   },
-  trustPriceMatchTitle: "No Tricks: Price Match Guarantee",
-  trustFreeInstallationTitle: "Halloween Treat: Free Installation",
-  midCtaEyebrow: "Halloween Offer: Free, No-Obligation Quote",
-  contactEyebrow: "Claim Your Free Halloween Quote",
-  contactSubmit: "Get My Free Halloween Quote",
+  trustPriceMatchTitle: "Black Friday: Price Match Guarantee",
+  trustFreeInstallationTitle: "Black Friday: Free Installation",
+  midCtaEyebrow: "Black Friday: Free, No-Obligation Quote",
+  contactEyebrow: "Claim Your Free Black Friday Quote",
+  contactSubmit: "Get My Free Black Friday Quote",
 };
 
 /** Active seasonal copy, or null when the site is in its standard state */
-export const seasonalCopy: SeasonalCopy | null = HALLOWEEN_ACTIVE ? halloweenCopy : null;
+export const seasonalCopy: SeasonalCopy | null = BLACK_FRIDAY_ACTIVE ? blackFridayCopy : null;

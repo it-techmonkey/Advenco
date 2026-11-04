@@ -32,7 +32,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { seasonalCopy, HALLOWEEN_HERO_DIR } from "@/data/seasonal";
+import { seasonalCopy, SEASONAL_HERO_DIR } from "@/data/seasonal";
 
 /**
  * Seasonal hero banners that have actually been added to /public. Checked at
@@ -41,7 +41,7 @@ import { seasonalCopy, HALLOWEEN_HERO_DIR } from "@/data/seasonal";
  */
 function getSeasonalHeroImages(): string[] {
   if (!seasonalCopy) return [];
-  const dir = path.join(process.cwd(), "public", HALLOWEEN_HERO_DIR);
+  const dir = path.join(process.cwd(), "public", SEASONAL_HERO_DIR);
   return Object.values(seasonalCopy.heroSlides)
     .map((slide) => slide.image)
     .filter((image) => existsSync(path.join(dir, path.basename(image))));
