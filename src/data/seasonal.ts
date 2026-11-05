@@ -34,13 +34,23 @@ export interface SeasonalCopy {
   /** Top utility bar tagline — keep close to the standard length so the bar doesn't wrap */
   topBarTagline: string;
   heroPreheading: string;
+  heroPrimaryCta: string;
+  heroSecondaryCta: string;
+  heroSecondaryHref: string;
+  heroBenefits: string[];
   /** Keyed by slide id in HeroSlider */
   heroSlides: Record<number, SeasonalHeroSlide>;
   trustPriceMatchTitle: string;
   trustFreeInstallationTitle: string;
   midCtaEyebrow: string;
+  /** {product} is replaced with the current page's product name. */
+  midCtaHeading: string;
   contactEyebrow: string;
+  contactHeading: string;
+  contactHeadingEmphasis: string;
+  contactDescription: string;
   contactSubmit: string;
+  contactReassurance: string;
 }
 
 /* ---------- Black Friday Copy ---------- */
@@ -51,58 +61,68 @@ export const SEASONAL_HERO_DIR = "/images/hero/black-friday";
 const blackFridayCopy: SeasonalCopy = {
   announcement: {
     title: "Black Friday Sale",
-    detail: "Free Consultation, Free Installation & Price Match Guarantee",
-    cta: "Claim Your Free Quote",
+    detail: "Blinds & Shutters. Fitted Free.",
+    cta: "Get My Free Quote",
   },
-  topBarTagline: "Black Friday: Free Installation",
-  heroPreheading: "Black Friday Sale — Made in Britain",
+  topBarTagline: "Black Friday: Free Expert Fitting",
+  heroPreheading: "Made to Measure. Made in Britain.",
+  heroPrimaryCta: "Get My Free Quote",
+  heroSecondaryCta: "Browse Styles",
+  heroSecondaryHref: "#made-to-measure",
+  heroBenefits: ["Free Consultation", "Free Installation", "Price Match Guarantee"],
   heroSlides: {
     1: {
-      heading: "This Black Friday, Choose",
-      headingItalic: "Beautiful Shutters",
+      heading: "Black Friday Sale",
+      headingItalic: "Shutters. Fitted Free.",
       description:
-        "Explore our Black Friday Sale: free consultation, free installation and a price match guarantee on premium blinds and shutters.",
+        "Choose made-to-measure shutters for your home. Get your free quote and start your window upgrade.",
       image: `${SEASONAL_HERO_DIR}/advenco-black-friday-shutters.webp`,
       alt: "Contemporary living room with white plantation shutters, a cream sofa and charcoal accents",
     },
     2: {
-      heading: "Refresh Your Windows",
-      headingItalic: "This Black Friday",
+      heading: "Black Friday Sale",
+      headingItalic: "Blinds. Fitted Free.",
       description:
-        "Beautifully crafted roller blinds, made to measure and fitted free. Discover your perfect style in our Black Friday Sale.",
+        "Find roller blinds that suit your space and let us take care of the fitting. Get your free quote.",
       image: `${SEASONAL_HERO_DIR}/advenco-black-friday-roller-blinds.webp`,
       alt: "Modern dining room with charcoal roller blinds, an oak table and cream upholstered chairs",
     },
     3: {
-      heading: "Beautiful Light,",
-      headingItalic: "Day and Night",
+      heading: "Black Friday Sale",
+      headingItalic: "Light. Privacy. Control.",
       description:
-        "Find your balance of light and privacy this Black Friday with made-to-measure day and night blinds, including free installation.",
+        "Take control of light and privacy with day and night blinds made for your space. Start with a free quote.",
       image: `${SEASONAL_HERO_DIR}/advenco-black-friday-day-night-blinds.webp`,
       alt: "Calm bedroom at dusk with layered day and night blinds, cream bedding and a teal throw",
     },
     4: {
-      heading: "Black Friday,",
-      headingItalic: "Stylish Windows",
+      heading: "Black Friday Sale",
+      headingItalic: "Made to Fit. Fitted Free.",
       description:
-        "Discover vertical blinds tailored to your space in our Black Friday Sale, with free installation and our price match guarantee.",
+        "Give your windows a fresh look with made-to-measure vertical blinds. Get your free quote and leave the fitting to us.",
       image: `${SEASONAL_HERO_DIR}/advenco-black-friday-vertical-blinds.webp`,
       alt: "Modern kitchen-diner with off-white vertical blinds across glazed patio doors and a pale stone island",
     },
     5: {
-      heading: "Your Style, Your Space,",
-      headingItalic: "Made for You",
+      heading: "Black Friday Sale",
+      headingItalic: "New Look. Fitted Free.",
       description:
-        "Make more of your home this Black Friday with bespoke Venetian blinds, a free consultation and expert fitting at no extra cost.",
+        "Bring a new look to your home with bespoke Venetian blinds. Choose your style and request your free quote.",
       image: `${SEASONAL_HERO_DIR}/advenco-black-friday-venetian-blinds.webp`,
       alt: "Refined home office with natural oak Venetian blinds, a dark wood desk and a charcoal chair",
     },
   },
-  trustPriceMatchTitle: "Black Friday: Price Match Guarantee",
-  trustFreeInstallationTitle: "Black Friday: Free Installation",
-  midCtaEyebrow: "Black Friday: Free, No-Obligation Quote",
-  contactEyebrow: "Claim Your Free Black Friday Quote",
-  contactSubmit: "Get My Free Black Friday Quote",
+  trustPriceMatchTitle: "Price Match Guarantee",
+  trustFreeInstallationTitle: "Expertly Fitted Free",
+  midCtaEyebrow: "Black Friday Sale",
+  midCtaHeading: "Choose your {product}. Fitting is free.",
+  contactEyebrow: "Get Your Black Friday Quote",
+  contactHeading: "Start Your",
+  contactHeadingEmphasis: "Window Upgrade",
+  contactDescription:
+    "Choose your new blinds or shutters with a free consultation, free expert installation and our price match guarantee. Tell us what you have in mind.",
+  contactSubmit: "Get My Free Quote",
+  contactReassurance: "Free consultation. No obligation.",
 };
 
 /** Active seasonal copy, or null when the site is in its standard state */

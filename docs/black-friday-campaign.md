@@ -5,6 +5,36 @@ layer. The existing free consultation, free installation and price match
 guarantee are presented as Black Friday offers. No discount percentages,
 deadlines or countdowns have been added.
 
+## Benefit-led copy and calls to action
+
+Every hero slide leads with a large, bold **Black Friday Sale** headline and a
+teal product benefit, starting with **Shutters. Fitted Free.** The existing free
+consultation, free installation and price match guarantee appear as a separate
+checklist beside the quote action on every slide. No additional offers, savings
+claims, deadlines or availability promises are introduced.
+
+The graphite sale strip shows **Blinds & Shutters. Fitted Free.** on mobile as
+well as desktop, with a contrasting teal **Get My Free Quote** button. The same
+action appears in the hero, dark product-page quote strips and form. The hero's
+**Browse Styles** action links to
+the homepage's existing `#made-to-measure` collection section.
+
+Product-page headings use **Choose your {product}. Fitting is free.** with the
+current product name. The form leads with **Get Your Black Friday Quote** and
+reinforces the existing **Free consultation. No
+obligation.** wording. All new campaign copy is in `src/data/seasonal.ts` and
+falls back to the standard site wording when the flag is disabled.
+
+The campaign hero grows with its content on small screens so the sale headline,
+benefit checklist and quote buttons remain readable without clipping. The bold
+headlines, darker overlay, checklist and dark quote cards are campaign-only;
+turning the flag off restores the standard hero and quote-card presentation.
+
+Enquiry delivery is separate from the campaign copy: the existing form handler
+simulates submission. A delivery service must be confirmed and configured before
+the form can send enquiries. This copy update does not configure a new recipient
+or make a new delivery promise.
+
 ## Quick switch-off
 
 1. Open `src/data/seasonal.ts`.
@@ -85,7 +115,10 @@ expressions from Navbar, TrustBar, MidPageCTA and ContactSection, keeping each
 expression's standard wording. Remove the SeasonalBanner import and render from
 Navbar. In HeroSlider, remove `withSeasonalCopy`, `HeroSliderProps` and the
 seasonal preheading expression; render the standard `slides` array and standard
-preheading. In `src/app/page.tsx`, remove the seasonal and filesystem imports and
+preheading. Restore the standard hero button labels, external shop URL and its
+new-tab attributes; restore the standard product-page heading, button and form
+reassurance by keeping the fallback branches of their seasonal expressions.
+In `src/app/page.tsx`, remove the seasonal and filesystem imports and
 `getSeasonalHeroImages`, then render `<HeroSlider />`.
 
 Once those references are removed, delete `src/data/seasonal.ts`,

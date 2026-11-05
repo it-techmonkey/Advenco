@@ -70,19 +70,18 @@ export default function ContactSection() {
               id="contact-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight"
             >
-              Bespoke{" "}
+              {seasonalCopy?.contactHeading ?? "Bespoke"}{" "}
               <em
                 className="font-bold italic"
                 style={{ fontFamily: "var(--font-heading, Outfit, sans-serif)" }}
               >
-                Consultation
+                {seasonalCopy?.contactHeadingEmphasis ?? "Consultation"}
               </em>
             </h2>
 
             {/* Description */}
             <p className="text-white/65 text-base leading-relaxed max-w-md">
-              Tell us about your space and we&apos;ll design the perfect window treatment
-              solution &mdash; tailored entirely to your home.
+              {seasonalCopy?.contactDescription ?? "Tell us about your space and we'll design the perfect window treatment solution — tailored entirely to your home."}
             </p>
 
             {/* Contact details */}
@@ -133,7 +132,7 @@ export default function ContactSection() {
               Right Column â€” Quote Form
           ============================================================ */}
           <div>
-            <p className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40 mb-8">
+            <p className={seasonalCopy ? "text-lg sm:text-xl font-bold text-white mb-8" : "text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40 mb-8"}>
               {seasonalCopy?.contactEyebrow ?? "Request A Free Quote"}
             </p>
 
@@ -232,14 +231,14 @@ export default function ContactSection() {
                   id="contact-submit-btn"
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-4 bg-[#00aeef] hover:bg-[#0099d4] disabled:bg-[#00aeef]/50 text-white text-sm font-bold tracking-widest uppercase rounded-sm transition-colors"
+                  className="w-full px-4 py-4 bg-[#00aeef] hover:bg-[#0099d4] disabled:bg-[#00aeef]/50 text-white text-sm font-bold tracking-widest uppercase rounded-sm transition-colors"
                   aria-label="Submit your free quote request"
                 >
                   {submitting ? "Sending..." : seasonalCopy?.contactSubmit ?? "Get My Free Quote"}
                 </button>
 
                 <p className="text-white/35 text-xs text-center">
-                  We typically respond within 24 hours.
+                  {seasonalCopy?.contactReassurance ?? "We typically respond within 24 hours."}
                 </p>
               </form>
             )}

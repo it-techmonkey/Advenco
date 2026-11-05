@@ -19,21 +19,23 @@ export default function MidPageCTA({ productName }: { productName: string }) {
   return (
     <section className="bg-white py-10 sm:py-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
-        <div className="bg-white border border-advenco-border border-l-4 border-l-advenco-teal rounded-sm shadow-sm px-6 py-7 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div className={`border border-l-4 border-l-advenco-teal rounded-sm shadow-sm px-6 py-7 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left ${seasonalCopy ? "bg-advenco-graphite border-advenco-graphite" : "bg-white border-advenco-border"}`}>
           <div>
             <p className="text-advenco-teal text-xs font-semibold tracking-[0.2em] uppercase mb-2">
               {seasonalCopy?.midCtaEyebrow ?? "Free, No-Obligation Quote"}
             </p>
-            <h3 className="font-heading text-advenco-graphite-mid text-xl sm:text-2xl font-semibold leading-snug">
-              Curious what {productName.toLowerCase()} would cost for your space?
+            <h3 className={`font-heading text-xl sm:text-2xl font-semibold leading-snug ${seasonalCopy ? "text-white" : "text-advenco-graphite-mid"}`}>
+              {seasonalCopy
+                ? seasonalCopy.midCtaHeading.replace("{product}", productName.toLowerCase())
+                : <>Curious what {productName.toLowerCase()} would cost for your space?</>}
             </h3>
           </div>
           <Link
             href="#contact"
-            className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-advenco-teal hover:bg-advenco-teal-dark text-white text-sm font-bold tracking-widest uppercase transition-colors rounded-sm"
+            className="inline-flex max-w-full shrink-0 items-center justify-center gap-2 px-5 py-3.5 sm:px-7 bg-advenco-teal hover:bg-advenco-teal-dark text-white text-sm font-bold tracking-widest uppercase transition-colors rounded-sm"
           >
-            Get a Free {productName} Quote
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+            {seasonalCopy?.contactSubmit ?? <>Get a Free {productName} Quote</>}
+            <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>

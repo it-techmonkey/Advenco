@@ -147,7 +147,7 @@ export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
   return (
     <section
       id="hero"
-      className="relative w-full h-[80vh] min-h-[560px] max-h-[900px] overflow-hidden"
+      className={`relative w-full overflow-hidden ${seasonalCopy ? "min-h-[700px] lg:min-h-[760px]" : "h-[80vh] min-h-[560px] max-h-[900px]"}`}
       aria-label="Hero section — featured window treatment gallery"
     >
       {/* ============================================================
@@ -175,18 +175,18 @@ export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
 
       {/* Dark overlay for text legibility */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/10"
+        className={`absolute inset-0 bg-gradient-to-r ${seasonalCopy ? "from-black/85 via-black/60 to-black/15" : "from-black/60 via-black/40 to-black/10"}`}
         aria-hidden="true"
       />
 
       {/* ============================================================
           Hero Content — text + CTAs
       ============================================================ */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto">
+      <div className={`relative z-10 flex flex-col justify-center px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto ${seasonalCopy ? "min-h-[700px] lg:min-h-[760px] pt-12 pb-24 sm:pt-16" : "h-full"}`}>
         {/* Pre-heading badge */}
         <p
           key={`pre-${currentIndex}`}
-          className="text-white/70 text-[11px] sm:text-xs font-normal tracking-[0.25em] uppercase mb-5 animate-fade-in-up"
+          className={`text-[11px] sm:text-xs tracking-[0.2em] uppercase mb-5 animate-fade-in-up ${seasonalCopy ? "text-white/85 font-semibold" : "text-white/70 font-normal"}`}
           style={{ animationFillMode: "both", fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)" }}
         >
           {seasonalCopy?.heroPreheading ?? "Premium Blinds & Shutters — Made in Britain"}
@@ -195,23 +195,25 @@ export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
         {/* Main heading */}
         <h1
           key={`h1-${currentIndex}`}
-          className="text-white animate-fade-in-up delay-100 mb-6 leading-[1.15]"
+          className={`text-white animate-fade-in-up delay-100 mb-6 ${seasonalCopy ? "max-w-4xl leading-[1.1]" : "leading-[1.15]"}`}
           style={{
             fontFamily: "var(--font-heading, 'Outfit', sans-serif)",
-            fontSize: "clamp(2.25rem, 5vw, 4.5rem)",
+            fontSize: seasonalCopy ? "clamp(2.125rem, 5.2vw, 4.75rem)" : "clamp(2.25rem, 5vw, 4.5rem)",
             animationFillMode: "both",
           }}
         >
-          {/* Main part — thin/light weight */}
-          <span style={{ fontWeight: 300, display: "block" }}>
+          {/* The active sale headline is deliberately the strongest element. */}
+          <span className={seasonalCopy ? "uppercase" : undefined} style={{ fontWeight: seasonalCopy ? 800 : 300, display: "block" }}>
             {current.heading}
           </span>
           {/* Italic bold part — on its own line */}
           {current.headingItalic && (
             <span
               style={{
-                fontWeight: 700,
-                fontStyle: "italic",
+                fontWeight: seasonalCopy ? 800 : 700,
+                fontStyle: seasonalCopy ? "normal" : "italic",
+                color: seasonalCopy ? "#00aeef" : undefined,
+                fontSize: seasonalCopy ? "0.85em" : undefined,
                 display: "block",
               }}
             >
@@ -223,11 +225,27 @@ export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
         {/* Description */}
         <p
           key={`desc-${currentIndex}`}
-          className="text-white/80 text-sm sm:text-base max-w-lg mb-9 leading-relaxed animate-fade-in-up delay-200"
+          className={`text-sm sm:text-base leading-relaxed animate-fade-in-up delay-200 ${seasonalCopy ? "text-white/85 max-w-xl mb-5" : "text-white/80 max-w-lg mb-9"}`}
           style={{ animationFillMode: "both", fontFamily: "var(--font-body, 'Space Grotesk', sans-serif)", fontWeight: 400 }}
         >
           {current.description}
         </p>
+
+        {seasonalCopy && (
+          <ul
+            aria-label="Black Friday benefits"
+            className="mb-7 flex max-w-2xl flex-wrap gap-x-5 gap-y-2 text-xs sm:text-sm text-white"
+          >
+            {seasonalCopy.heroBenefits.map((benefit) => (
+              <li key={benefit} className="flex items-center gap-2">
+                <svg className="h-4 w-4 shrink-0 text-advenco-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m5 12 4 4L19 6" />
+                </svg>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* CTA Buttons */}
         <div
@@ -241,21 +259,21 @@ export default function HeroSlider({ seasonalImages = [] }: HeroSliderProps) {
             href="#contact"
             className="flex items-center gap-2 px-7 py-3.5 bg-[#00aeef] hover:bg-[#0099d4] text-white text-sm font-bold tracking-widest uppercase transition-colors rounded-sm"
           >
-            Design Your View
+            {seasonalCopy?.heroPrimaryCta ?? "Design Your View"}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
 
-          {/* Secondary CTA — solid white — external shop link */}
+          {/* Campaign browsing stays on the page; the standard CTA opens the shop. */}
           <a
             id="hero-explore-collection-btn"
-            href="https://www.onlineblindsexpress.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={seasonalCopy?.heroSecondaryHref ?? "https://www.onlineblindsexpress.co.uk/"}
+            target={seasonalCopy ? undefined : "_blank"}
+            rel={seasonalCopy ? undefined : "noopener noreferrer"}
             className="flex items-center gap-2 px-7 py-3.5 bg-white hover:bg-gray-50 text-[#1e293b] text-sm font-bold tracking-widest uppercase transition-colors rounded-sm"
           >
-            Explore Collection
+            {seasonalCopy?.heroSecondaryCta ?? "Explore Collection"}
           </a>
         </div>
       </div>
